@@ -11,7 +11,10 @@ jobs:
         - '2.1.4'
         - '2.2.2'
         - '2.3.3'
-        - '2.4.0'
+        - '2.4.1'
+        - '2.5.1'
+        - '2.6.0'
+        - '2.7.0'
     env:
       KONG_VERSION: ${{ matrix.kong_version }}
       KONG_ENTERPRISE_REPO_USERNAME: ${{ secrets.KONG_ENTERPRISE_REPO_USERNAME }}
