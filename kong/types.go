@@ -88,6 +88,15 @@ type Consumer struct {
 	Tags      []*string `json:"tags,omitempty" yaml:"tags,omitempty"`
 }
 
+// ConsumerGroup represents a consumer group in Kong
+// +k8s:deepcopy-gen=true
+type ConsumerGroup struct {
+	ID        *string   `json:"id,omitempty" yaml:"id,omitempty"`
+	Name      *string   `json:"name,omitempty" yaml:"name,omitempty"`
+	CreatedAt *int64    `json:"created_at,omitempty" yaml:"created_at,omitempty"`
+	Tags      []*string `json:"tags,omitempty" yaml:"tags,omitempty"`
+}
+
 // Certificate represents a Certificate in Kong.
 // Read https://getkong.org/docs/0.14.x/admin-api/#certificate-object
 // +k8s:deepcopy-gen=true

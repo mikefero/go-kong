@@ -1,4 +1,3 @@
-//nolint:unparam
 package kong
 
 import (
@@ -119,6 +118,7 @@ func runWhenKong(t *testing.T, semverRange string) {
 		t.Error(err)
 	}
 	if !r(currentVersion) {
+		t.Logf("version %v outside range %v, skipping", currentVersion, semverRange)
 		t.Skip()
 	}
 }
