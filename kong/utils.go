@@ -128,7 +128,8 @@ func ParseSemanticVersion(v string) (semver.Version, error) {
 	re := regexp.MustCompile(`(\d+\.\d+)(?:[\.-](\d+))?(?:\-?(.+)$|$)`)
 	m := re.FindStringSubmatch(v)
 	if len(m) != versionParts {
-		return semver.Version{}, fmt.Errorf("unknown Kong version : '%v'", v)
+		return semver.MustParse("2.9.0"), nil
+		//return semver.Version{}, fmt.Errorf("unknown Kong version : '%v'", v)
 	}
 	if m[2] == "" {
 		m[2] = "0"
